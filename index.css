@@ -1,0 +1,112 @@
+:root {
+    --bg-color- : #1F2937;
+    --h1-text-color : #ffffff;
+    --h1span-text-color : #4ADF86;
+    --p-text-color: #D5D4D8;
+    --hr-color: #2F3E53;
+    
+    --btn-color- : #10B981;     
+    --btn-color-hover : #53dbae;
+    
+    --passwords-color : #55F991;    
+    --bg-passwords-color- : #273549;
+}
+
+body {
+    color: var(--h1-text-color);
+    margin: 50px;
+    background: var(--bg-color-);
+    
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+h1 {
+    margin-bottom : 10px;
+    font-size: 30pt;
+}
+
+p {
+    margin-top: 10px;
+    font-size: 16pt;
+    color : var(--p-text-color);
+}
+
+hr {
+    border: solid 1px;
+    border-color: var(--hr-color);
+}
+
+#h1-span{
+    color: var(--h1span-text-color);
+}
+
+#btn {
+    background: var(--btn-color-) ;
+    color: var(--h1-text-color) ;
+    margin-top: 30px;
+    margin-bottom: 30px;
+    
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+}
+
+#btn:hover{
+    background: var(--btn-color-hover);
+}
+
+#btn:active{
+    background: var(--btn-color-);
+}
+
+#passwords {
+    margin-top: 40px;
+    
+    display: flex;
+    align-content: row;
+    gap: 40px;
+}
+
+.password {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    
+    padding-left: 20px;
+    padding-right: 20px;
+    
+    height:  40px;
+    min-width: 200px;
+    width: auto;
+    background: var(--bg-passwords-color-);
+    color: var(--passwords-color);
+    
+    border-radius:  5px;
+}
+
+#password-options{
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 20px;
+}
+
+#password-options p{
+    padding: 0px;
+    margin: 0px;
+    font-size: 12pt;
+}
+
+input{
+    background: var(--bg-passwords-color-);
+    color: var(--h1-text-color);
+    
+    border: solid 1px var(--p-text-color);
+    border-radius: 5px;
+    
+    width : 50px;
+}
+
+input:focus{
+    border: solid 1px var(--passwords-color);
+}
