@@ -14,6 +14,11 @@ function generatePassword()
         passwordLength = 99;
         document.getElementById('pass-length').value = passwordLength;
     }
+    if (passwordLength < 1)
+    {
+        passwordLength = 1;
+        document.getElementById('pass-length').value = passwordLength;
+    }
     
     for (let i = 0; i < passwordLength; i++)
     {
@@ -57,42 +62,4 @@ function createPass(inputStringOfId)
     let idEl = document.getElementById(inputStringOfId);
     
     idEl.textContent = generatePassword();
-}
-
-/*
-
-let pass1El = document.getElementById("pass1");
-
-pass1El.addEventListener("click", function(){
-    console.log(pass1El.textContent);
-    //navigator.clipboard.writeText(pass1El.textContent);
-})
-*/
-
-
-function addToPasswordLength(int)
-{
-    let idEl = document.getElementById("pass-length");
-    
-    console.debug(idEl.value);
-    
-    /*
-    let idEl = document.getElementById("passwordLength");
-    let number = parseInt(idEl.textContent);
-    
-    number += int;
-    
-    //  Password length can't be less than 1
-    if (number < 1)
-    {
-        number = 1;
-    }
-    
-    idEl.textContent = number;
-    */
-}
-
-function test()
-{
-    navigator.clipboard.writeText(document.getElementById("pass1"))
 }
